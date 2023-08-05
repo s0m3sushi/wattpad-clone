@@ -9,7 +9,7 @@
 	<header>
 		<div class="wrapper">
 			<ul class="left">
-				<img class="logo" src="./img/logo.png" alt="">
+				<img src="./img/logo.png" alt="">
 				<li>
 					<h6>Khám phá</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">

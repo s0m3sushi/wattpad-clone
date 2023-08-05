@@ -152,7 +152,7 @@ header li img.next-to-text {
 	margin-right: 8px;
 }
 header ul.search {
-	width: 30%;
+	width: 32%;
 	border-radius: 24px;
 	margin: 8px 8px 8px 0;
 	background-color: white;
