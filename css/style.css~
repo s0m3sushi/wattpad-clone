@@ -556,7 +556,18 @@ footer li {
 		height: 175px;
 	}
 }
-@media only screen and (max-width: 353px) {
+@media only screen and (max-width: 360px) {
+	ul.search {
+		display: none;
+	}
+	li.novel-3 {
+		display: none;
+	}
+	footer p {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 319px) {
 	header {
 		display: none;
 	}
