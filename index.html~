@@ -4,18 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Wattpad</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 <body>
 	<header>
 		<div class="wrapper">
 			<ul class="left">
-				<img src="./img/logo.png" alt="">
-				<li>
-					<h6>Khám phá</h6>
+				<li class="dropdown">
+					<img src="./svg/dropdown-bars.svg" alt="">
+				</li>
+				<img class="logo" src="./img/logo.png" alt="">
+				<li class="explore">
+					<img class="compass" src="./svg/compass.svg" alt="">
+					<h6 class="compass">Khám phá</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
 				</li>
-				<li>
-					<h6>Cộng đồng</h6>
+				<li class="community">
+					<img class="community" src="./svg/people-group.svg" alt="">
+					<h6 class="community">Cộng đồng</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
 				</li>
 			</ul>
@@ -28,23 +34,20 @@
 			<ul class="right">
 				<li class="write">
 					<img class="next-to-text" src="./svg/pencil.svg" alt="">
-					<h6>Viết</h6>
+					<h6 class="write">Viết</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
 				</li>
-				<li>
-					<img src="./svg/home.svg" alt="">
-				</li>
-				<li>
+				<li class="bookmarks">
 					<img src="./svg/book.svg" alt="">
 				</li>
-				<li>
+				<li class="notification">
 					<img src="./svg/bell.svg" alt="">
 				</li>
 				<li>
 					<div class="profile">
 						<img src="./svg/person.svg" alt="">
 					</div>
-					<h6>Gemini2k4</h6>
+					<h6 class="username">Gemini2k4</h6>
 				</li>
 			</ul>
 		</div>
@@ -54,8 +57,6 @@
 			<h1>Chào mừng đến trang chủ, Gemini2k4!</h1>
 			<div class="section-details">
 				<h2>Truyện đã hoàn thành gần đây</h2>
-				<br>
-				<br>
 				<div class="frame">
 					<div class="background"></div>
 					<div class="left">
@@ -77,7 +78,7 @@
 								<p>12,5K</p>
 							</li>
 						</ul>
-						<p>
+						<p class="dialog">
 							<b>Tác giả:</b> Trĩ Sở <br>
 							<b>Dịch giả:</b> Tiểu Song Tử <br>
 							<b>Thể loại:</b> Hiện đại, niên hạ, giới giải trí, duyên trời tác hợp, chữa lành, minh tinh công x phong lưu họa sĩ thụ. <br>
@@ -94,19 +95,19 @@
 					<li class="arrows">
 						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
 					</li>
-					<li>
+					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-2">
 						<img src="./img/novel-2.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-3">
 						<img src="./img/novel-3.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-4">
 						<img src="./img/novel-4.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-5">
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
@@ -115,27 +116,24 @@
 				</ul>
 			</div>
 			<div class="section-carousel">
-				<br>
 				<h2>Truyện hay nhất đề xuất cho bạn</h2>
-				<br>
-				<br>
 				<ul>
 					<li class="arrows">
 						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
 					</li>
-					<li>
+					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-2">
 						<img src="./img/novel-2.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-3">
 						<img src="./img/novel-3.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-4">
 						<img src="./img/novel-4.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-5">
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
@@ -144,27 +142,24 @@
 				</ul>
 			</div>
 			<div class="section-carousel">
-				<br>
 				<h2>Truyện được thảo luận nhiều</h2>
-				<br>
-				<br>
 				<ul>
 					<li class="arrows">
 						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
 					</li>
-					<li>
+					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-2">
 						<img src="./img/novel-2.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-3">
 						<img src="./img/novel-3.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-4">
 						<img src="./img/novel-4.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-5">
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
@@ -173,10 +168,7 @@
 				</ul>
 			</div>
 			<div class="section-details">
-				<br>
 				<h2>Khám phá điều gì đó mới</h2>
-				<br>
-				<br>
 				<div class="frame">
 					<div class="background"></div>
 					<div class="left">
@@ -198,7 +190,7 @@
 								<p>12,5K</p>
 							</li>
 						</ul>
-						<p>
+						<p class="dialog">
 							<b>Tác giả:</b> Trĩ Sở <br>
 							<b>Dịch giả:</b> Tiểu Song Tử <br>
 							<b>Thể loại:</b> Hiện đại, niên hạ, giới giải trí, duyên trời tác hợp, chữa lành, minh tinh công x phong lưu họa sĩ thụ. <br>
@@ -215,19 +207,19 @@
 					<li class="arrows">
 						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
 					</li>
-					<li>
+					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-2">
 						<img src="./img/novel-2.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-3">
 						<img src="./img/novel-3.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-4">
 						<img src="./img/novel-4.jpg" alt="">
 					</li>
-					<li>
+					<li class="novel-5">
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
@@ -256,5 +248,15 @@
 			</ul>
 		</div>
 	</footer>
+	<div class="unsupported-res">
+		<img src="./svg/warning.svg" alt="">
+		<h3>Unsupported <br> Resolution</h3>
+		<p>
+			<br>
+			Please access this site on a bigger device.
+			<br>
+			For Galaxy Folds, please open up your phone.
+		</p>
+	</div>
 </body>
 </html>
