@@ -580,7 +580,7 @@ footer li {
 		width: 48px;
 		height: 48px;
 	}
-	.unsupported-res h2 {
+	.unsupported-res h3 {
 		text-align: center;
 	}
 	.unsupported-res p {
