@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
-<body>
+<body class="main">
 	<header>
 		<div class="wrapper">
 			<ul class="left">
@@ -255,7 +255,7 @@
 			<br>
 			Please access this site on a bigger device.
 			<br>
-			For Galaxy Folds, please open up your phone.
+			For Galaxy Folds, please unfold your phone.
 		</p>
 	</div>
 </body>

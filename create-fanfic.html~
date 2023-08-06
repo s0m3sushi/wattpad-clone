@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wattpad</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body id="create-fanfic">
+	<header>
+		<div class="wrapper">
+			<ul class="left">
+				<li class="dropdown">
+					<img src="./svg/dropdown-bars.svg" alt="">
+				</li>
+				<img class="logo" src="./img/logo.png" alt="">
+				<li class="explore">
+					<img class="compass" src="./svg/compass.svg" alt="">
+					<h6 class="compass">Khám phá</h6>
+					<img src="./svg/round-arrow-drop-down.svg" alt="">
+				</li>
+				<li class="community">
+					<img class="community" src="./svg/people-group.svg" alt="">
+					<h6 class="community">Cộng đồng</h6>
+					<img src="./svg/round-arrow-drop-down.svg" alt="">
+				</li>
+			</ul>
+			<ul class="search">
+				<li>
+					<img class="next-to-text" src="./svg/search.svg" alt="">
+					<h6>Tìm kiếm</h6>
+				</li>
+			</ul>
+			<ul class="right">
+				<li class="write">
+					<img class="next-to-text" src="./svg/pencil.svg" alt="">
+					<h6 class="write">Viết</h6>
+					<img src="./svg/round-arrow-drop-down.svg" alt="">
+				</li>
+				<li class="bookmarks">
+					<img src="./svg/book.svg" alt="">
+				</li>
+				<li class="notification">
+					<img src="./svg/bell.svg" alt="">
+				</li>
+				<li>
+					<div class="profile">
+						<img src="./svg/person.svg" alt="">
+					</div>
+					<h6 class="username">Gemini2k4</h6>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<header class="nav">
+		<div class="wrapper">
+			<ul class="left">
+				<li class="go-back">
+					<img src="./svg/chevron-left.svg" alt="">
+					<h6>Sáng tác Truyện</h6>
+				</li>
+			</ul>
+			<ul class="title">
+				<li>
+					<h6>Truyện chưa có Tiêu Đề</h6>
+				</li>
+			</ul>
+			<ul class="right">
+				<li class="select-fanfic">
+					<img class="dots-menu" src="./svg/dots-vertical.svg" alt="">
+					<h6>Chọn</h6>
+				</li>
+				<li class="next-step">
+					<h6>Tiếp theo</h6>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<article>
+		<div class="wrapper">
+			<div class="left">
+				<img src="./img/edit-novel.jpg" alt="">
+			</div>
+			<div class="right">
+				 <h2>Chi tiết Truyện</h2>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<div class="wrapper">
+			<ul class="left">
+				<li><p>Kinh doanh</p></li>
+				<li><p>Các tác giả</p></li>
+				<li><p>Báo chí</p></li>
+			</ul>
+			<ul class="middle">
+				<li><p>Truyện tính phí</p></li>
+				<li><p>Thử dùng gói cao cấp</p></li>
+				<li><p>Tải ứng dụng</p></li>
+			</ul>
+			<ul class="right">
+				<li><p>Điều khoản</p></li>
+				<li><p>Bảo mật</p></li>
+				<li><p>Trợ giúp</p></li>
+			</ul>
+		</div>
+	</footer>
+	<div class="unsupported-res">
+		<img src="./svg/warning.svg" alt="">
+		<h3>Unsupported <br> Resolution</h3>
+		<p>
+			<br>
+			Please access this site on a bigger device.
+			<br>
+			For Galaxy Folds, please unfold your phone.
+		</p>
+	</div>
+</body>
+</html>
