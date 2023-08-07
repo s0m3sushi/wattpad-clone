@@ -13,7 +13,9 @@
 				<li class="dropdown">
 					<img src="./svg/dropdown-bars.svg" alt="">
 				</li>
-				<img class="logo" src="./img/logo.png" alt="">
+				<a href="./index.html">
+					<img class="logo" src="./img/logo.png" alt="">
+				</a>
 				<li class="explore">
 					<img class="compass" src="./svg/compass.svg" alt="">
 					<h6 class="compass">Khám phá</h6>
@@ -32,14 +34,11 @@
 				</li>
 			</ul>
 			<ul class="right">
-				<li class="write">
-					<img class="next-to-text" src="./svg/pencil.svg" alt="">
-					<h6 class="write">Viết</h6>
-					<img src="./svg/round-arrow-drop-down.svg" alt="">
-				</li>
-				<li class="bookmarks">
-					<img src="./svg/book.svg" alt="">
-				</li>
+				<a href="./my-fanfic.html">
+					<li class="bookmarks">
+						<img src="./svg/book.svg" alt="">
+					</li>
+				</a>
 				<li class="notification">
 					<img src="./svg/bell.svg" alt="">
 				</li>
@@ -55,10 +54,12 @@
 	<header class="nav">
 		<div class="wrapper">
 			<ul class="left">
-				<li class="go-back">
-					<img src="./svg/chevron-left.svg" alt="">
-					<h6>Sáng tác Truyện</h6>
-				</li>
+				<a href="./my-fanfic.html">
+					<li class="go-back">
+						<img src="./svg/chevron-left.svg" alt="">
+						<h6>Sáng tác Truyện</h6>
+					</li>
+				</a>
 			</ul>
 			<ul class="title">
 				<li>
@@ -80,9 +81,126 @@
 		<div class="wrapper">
 			<div class="left">
 				<img src="./img/edit-novel.jpg" alt="">
+				<ul class="add-media">
+					<li>
+						<img src="./svg/image.svg" alt="">
+					</li>
+					<li>
+						<img src="./svg/video.svg" alt="">
+					</li>
+				</ul>
 			</div>
 			<div class="right">
-				 <h2>Chi tiết Truyện</h2>
+				<form action="">
+					<ul class="title">
+						<li>
+							<label for="title"><h4>Tiêu đề</h4></label>
+							<input type="text" placeholder="Truyện chưa có tiêu đề">
+						</li>
+					</ul>
+					<ul class="description">
+						<li>
+							<label for="description">
+								<h4>Mô tả</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<span role="textbox" placeholder="Ghi mô tả chi tiết ở đây" contenteditable>
+						</li>
+					</ul>
+					<ul class="mc">
+						<li>
+							<label for="mc">
+								<h4>Các nhân vật chính</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+						</li>
+						<li class="expandable-name">
+							<input type="text" placeholder="Họ và Tên">
+							<div class="plus">
+								<img src="./svg/plus.svg" alt="">
+							</div>
+						</li>
+					</ul>
+					<ul class="category">
+						<li>
+							<label for="category">
+								<h4>Thể loại</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<input type="text" placeholder="Chọn một thể loại" list="category">
+							<datalist id="category">
+								<option value="Drama"></option>
+								<option value="Đời thường"></option>
+								<option value="Boys Love"></option>
+								<option value="Girls Love"></option>
+							</datalist>
+						</li>
+					</ul>
+					<ul class="tags">
+						<li>
+							<label for="tags">
+								<h4>Thẻ tag</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<input type="text" placeholder="Thêm các tag vào đây">
+						</li>
+					</ul>
+					<ul class="reader-and-language">
+						<li class="reader">
+							<label for="reader">
+								<h4>Mục tiêu độc giả</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<input type="text" placeholder="Ai là độc giả chính của bạn?" list="reader-target">
+							<datalist id="reader-target">
+								<option value="placeholder"></option>
+								<option value="placeholder"></option>
+								<option value="placeholder"></option>
+							</datalist>
+						</li>
+						<li class="language">
+							<label for="language">
+								<h4>Ngôn ngữ</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<input type="text" list="languages">
+							<datalist id="languages">
+								<option value="Tiếng Việt"></option>
+								<option value="Tiếng Anh"></option>
+								<option value="Tiếng Nhật"></option>
+								<option value="Tiếng Hàn"></option>
+							</datalist>
+						</li>
+					</ul>
+					<ul class="copyright">
+						<li>
+							<label for="copyright">
+								<h4>Bản quyền</h4>
+								<img src="./svg/warning.svg" alt="">
+							</label>
+							<input type="text" list="copyright-types">
+							<datalist id="copyright-types">
+								<option value="placeholder"></option>
+								<option value="placeholder"></option>
+								<option value="placeholder"></option>
+							</datalist>
+							<p>Bạn không cho phép người khác sử dụng hay chỉnh sửa tác phẩm của mình dưới bất kỳ hình thức nào mà không có sự cho phép của bạn.</p>
+						</li>
+					</ul>
+					<ul class="age-restriction">
+						<li>
+							<label for="age-restriction">
+								<h4>Giới hạn độ tuổi</h4>
+							</label>
+							<input type="text" list="adult">
+							<datalist id="adult">
+								<option value="Không"></option>
+								<option value="Có"></option>
+							</datalist>
+							<p>Your story is appropriate for all audiences. The Wattpad community has the ability to rate your story Mature. For more information, please read Wattpad's <a href="https://www.wattpad.com/guidelines">Content Guidelines</a>.</p>
+						</li>
+					</ul>
+				</form>
 			</div>
 		</div>
 	</article>

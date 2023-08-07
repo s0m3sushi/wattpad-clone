@@ -49,27 +49,23 @@
 * {
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 	list-style-type: none;
 	transition-duration: 200ms;
 	transition-timing-function: ease-out;
 }
 :root {
-	--background-main: #F0F7FB;
-	--background-alt: #E5F2F8;
-	--main-blue: #B2D9EA;
-	--heavy-blue:  #4460F0;
-	--light-gray-blue: #C2D6DF; 
+	--background: #F0F7FB;
 	--gray-blue : #DAE9F2;
-	--heavier-gray-blue: #94B5C3;
+	--heavier-gray-blue: #C2D6DF;
 	--orange: #F85E2D;
-	--painful-red: #F60606;
 	--gray: #BEBEBE;
 	--dark-gray: #444444;
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	background-color: var(--background-main);
+	background-color: var(--background);
 }
 h1 {
 	font-family: 'Inter';
@@ -112,9 +108,12 @@ p {
 	width: 1200px;
 	margin: auto;
 }
+a {
+	color: inherit;
+}
 header {
 	height: fit-content;
-	background-color: var(--light-gray-blue);
+	background-color: var(--heavier-gray-blue);
 	color: var(--dark-gray);
 }
 header .wrapper {
@@ -153,7 +152,7 @@ ul.search li {
 	border-radius: 24px;
 	padding: 12px 16px;
 	margin: 8px 0 8px 10px;
-	background-color: white;
+	background-color: var(--background);
 }
 li.write {
 	padding: 12px 10px 12px 16px;
@@ -215,7 +214,7 @@ article h1 {
 	top: 10%;
 	margin: auto;
 	border-radius: 16px;
-	background-color: var(--main-blue);
+	background-color: var(--gray-blue);
 	z-index: -2;
 }
 .section-details .frame .left {
@@ -284,7 +283,7 @@ article h1 {
 	height: unset;
 }
 footer {
-	background-color: var(--light-gray-blue);
+	background-color: var(--gray-blue);
 }
 footer .wrapper {
 	display: flex;
@@ -303,27 +302,160 @@ footer li {
 #create-fanfic header.nav {
 	position: sticky;
 	top: 0;
+	z-index: +1;
 	background-color: var(--gray-blue);
 }
-#create-fanfic ul.right li {
+#create-fanfic article .wrapper {
+	padding: 24px 0 32px 0;
+	flex-direction: unset;
+	gap: 16px;
+}
+#create-fanfic article .wrapper .left {
+	width: 250px;
+	height: 400px;
+	margin-left: 32px;
+}
+#create-fanfic article .wrapper .right {
+	width: fit-content;
+	border-radius: 16px;
+	padding: 32px 0;
+	margin-right: 32px;
+	background-color: var(--gray-blue);
+}
+#create-fanfic article .left {
+	position: sticky;
+	top: 72px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 8px;
+}
+#create-fanfic article .left img {
+	border-radius: 16px;
+}
+#create-fanfic article .right {
+	margin-top: 8px;
+}
+#create-fanfic article ul.right li {
 	margin: 8px 5px;
+}
+#create-fanfic article label {
+	display: flex;
+	align-items: center;
+}
+#create-fanfic article label img {
+	width: 20px;
+	height: 20px;
+	margin-left: 4px;
+	filter: brightness(26%);
+}
+#create-fanfic article ul.reader-and-language {
+	display: flex;
+}
+#create-fanfic article li {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+#create-fanfic ul.search li {
+	margin: 8px 10px;
+}
+#create-fanfic ul.add-media {
+	display: flex;
+	gap: 8px;
+}
+#create-fanfic ul.add-media li {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 12px 0;
+	border-radius: 16px;
+	background-color: var(--heavier-gray-blue);
+}
+#create-fanfic ul.add-media img {
+	width: 24px;
+	height: 24px;
+	border-radius: unset;
+	filter: brightness(26%);
 }
 #create-fanfic img.dots-menu {
 	display: none;
 }
 #create-fanfic li.select-fanfic {
 	padding: 10px 12px;
+	margin: 8px 4px 8px 0;
 	border-radius: 20px;
-	background-color: var(--light-gray-blue);
+	background-color: var(--heavier-gray-blue);
 }
 #create-fanfic li.next-step {
 	padding: 10px 12px;
+	margin: 8px 0 8px 4px;
 	border-radius: 20px;
 	color: white;
 	background-color: var(--orange);
 }
-#create-fanfic article .wrapper {
-	flex-direction: unset;
+#create-fanfic ul.mc {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+#create-fanfic ul.mc .plus {
+	width: 24px;
+	height: 24px;
+	border-radius: 16px;
+	padding: 12px;
+	background-color: var(--heavier-gray-blue);
+}
+#create-fanfic ul.mc input {
+	width: 150px;
+}
+#create-fanfic ul.mc .plus img {
+	width: 24px;
+	height: 24px;
+	filter: brightness(26%);
+}
+#create-fanfic ul.reader-and-language {
+	gap: 16px;
+}
+#create-fanfic li.expandable-name {
+	flex-direction: row;
+}
+#create-fanfic li.reader {
+	width: 250px;
+}
+#create-fanfic li.language {
+	width: 150px;
+}
+#create-fanfic ul.age-restriction a {
+	color: blue;
+}
+#create-fanfic form {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 0 32px;
+}
+#create-fanfic input {
+	width: -webkit-fill-available;
+	font-family: inherit;
+	padding: 14px 16px;
+	border: 2px solid var(--gray);
+	border-radius: 8px;
+	background-color: var(--background);
+}
+#create-fanfic span {
+	width: -webkit-fill-available;
+	height: 200px;
+	font-family: inherit;
+	border: 2px solid var(--gray);
+	border-radius: 8px;
+	overflow-y: scroll;
+	padding: 14px 16px;
+	background-color: var(--background);
+}
+#create-fanfic span::-webkit-scrollbar {
+	display: none;
 }
 /* Sub 1080p */
 @media only screen and (max-width: 1440px) {
@@ -447,6 +579,11 @@ footer li {
 		display: none;
 	}
 }
+@media only screen and (max-width: 768px) {
+	#create-fanfic ul.reader-and-language {
+		flex-direction: column;
+	}
+}
 @media only screen and (max-width: 711px) {
 	header ul.left li.dropdown {
 		display: flex;
@@ -483,6 +620,19 @@ footer li {
 	}
 	#create-fanfic img.dots-menu {
 		display: unset;
+	}
+}
+@media only screen and (max-width: 602px) {
+	#create-fanfic article .wrapper {
+		flex-direction: column;
+	}
+	#create-fanfic article .wrapper .left {
+		height: fit-content;
+		position: unset;
+		margin: auto;
+	}
+	#create-fanfic article .wrapper .right {
+		margin: 0 32px;
 	}
 }
 @media only screen and (max-width: 582px) {
@@ -524,7 +674,7 @@ footer li {
 	.section-carousel {
 		padding: 0 16px;
 	}
-	#create-fanfic ul.title {
+	#create-fanfic header ul.title {
 		display: none;
 	}
 	#create-fanfic header ul.left {
@@ -599,7 +749,7 @@ footer li {
 		height: 175px;
 	}
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 377px) {
 	ul.search {
 		display: none;
 	}
@@ -611,6 +761,15 @@ footer li {
 	}
 	#my-fanfic li.novel-3 {
 		display: none;
+	}
+	#create-fanfic article .wrapper .right {
+		margin: 0 16px;
+	}
+}
+@media only screen and (max-width: 345px) {
+	#create-fanfic article .wrapper .right {
+		border-radius: unset;
+		margin: unset;
 	}
 }
 @media only screen and (max-width: 319px) {

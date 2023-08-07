@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
-<body id="create-fanfic">
+<body id="my-fanfic">
 	<header>
 		<div class="wrapper">
 			<ul class="left">
