@@ -52,13 +52,17 @@
 	text-decoration: none;
 	list-style-type: none;
 	transition-duration: 200ms;
-	transition-timing-function: ease-out;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 :root {
 	--background: #F0F7FB;
+	--light-gray-blue: #B6CDD8;
 	--gray-blue : #DAE9F2;
-	--heavier-gray-blue: #C2D6DF;
+	--heavy-gray-blue: #A3B9C2;
+	--even-heavier-gray-blue: #8AA0A8;
+	--light-orange: #FA6E52;
 	--orange: #F85E2D;
+	--darker-orange: #DF3907;
 	--gray: #BEBEBE;
 	--dark-gray: #444444;
 	font-family: 'Inter';
@@ -113,8 +117,9 @@ a {
 }
 header {
 	height: fit-content;
-	background-color: var(--heavier-gray-blue);
+	background-color: var(--light-gray-blue);
 	color: var(--dark-gray);
+	z-index: 2;
 }
 header .wrapper {
 	display: flex;
@@ -122,7 +127,9 @@ header .wrapper {
 	justify-content: space-between;
 }
 img.logo {
-	padding: 0 8px;
+	width: fit-content;
+	height: 36px;
+	padding: 12px 8px 8px 8px;
 }
 header ul {
 	display: flex;
@@ -136,7 +143,125 @@ header li {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 8px 10px;
+	border-radius: 24px;
+	padding: 12px;
+	margin: 0 4px;
+}
+header li:hover {
+	background-color: var(--heavy-gray-blue);
+}
+header .wrapper li:active {
+	border-radius: 12px;
+	background-color: var(--even-heavier-gray-blue);
+}
+header li.explore {
+	flex-shrink: 0;
+	padding: 12px 8px 12px 12px;
+}
+
+/* Start of experimental css dropdown */
+header li.explore .explore-dropdown {
+	position: absolute;
+	top: 72px;
+	left: 178px;
+	padding: 8px;
+	border-radius: 16px;
+	z-index: 100000;
+	visibility: hidden;
+	opacity: 0;
+}
+header li.explore:focus .explore-dropdown .wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--gray-blue);
+	outline: none;
+	visibility: visible;
+	opacity: 1;
+}
+header li.explore:focus .explore-dropdown ul {
+	width: fit-content;
+	display: flex;
+	align-items: flex-start;
+}
+header li.explore:focus .explore-dropdown li {
+	margin: 4px;
+}
+header li:hover, li.explore:focus li:hover {
+	background-color: var(--light-gray-blue);
+}
+header li:hover, li.explore:focus li:active {
+	background-color: var(--heavy-gray-blue);
+}
+header li.explore i.close-dropdown {
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 10;
+	display: none;
+}
+header li.explore:focus i.close-dropdown {
+	display: flex;
+	justify-content: center;
+}
+header li.explore i.close-dropdown:focus .explore-dropdown {
+	outline: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+
+header li.community .community-dropdown {
+	position: absolute;
+	top: 72px;
+	left: 8px;
+	background-color: var(--gray-blue);
+	width: -webkit-fill-available;
+	z-index: 100000;
+	visibility: hidden;
+	opacity: 0;
+}
+header li.community:focus .community-dropdown {
+	outline: none;
+	visibility: visible;
+	opacity: 1;
+}
+header li:hover, li.community:focus li {
+	background-color: var(--heavy-gray-blue);
+}
+header li.community i.close-dropdown {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+	z-index: 10;
+	display: none;
+}
+header li.community:focus i.close-dropdown {
+	display: flex;
+	justify-content: center;
+}
+header li.community i.close-dropdown:focus .community-dropdown {
+	outline: none;
+	visibility: hidden;
+	opacity: 0;
+}
+/* End of experimental css dropdown */
+
+header li.community {
+	flex-shrink: 0;
+	padding: 12px 8px 12px 12px;
 }
 header li img {
 	filter: brightness(26%);
@@ -144,21 +269,48 @@ header li img {
 header li img.next-to-text {
 	margin-right: 8px;
 }
+header li.profile {
+	padding: 8px;
+}
 ul.search {
-	width: 100%;
+	width: -webkit-fill-available;
 }
 ul.search li {
 	width: 100%;
+	padding: 8px 0;
+}
+ul.search li:hover {
+	background-color: initial;
+}
+ul.search li input[type=text] {
+	background-image: url(../svg/search.svg);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: 12px;
+	width: 100%;
+	height: 48px;
+	font-family: inherit;
+	font-size: 16px;
+	border: none;
 	border-radius: 24px;
-	padding: 12px 16px;
-	margin: 8px 0 8px 10px;
+	padding: 0 16px 0 40px;
 	background-color: var(--background);
+}
+ul.search li input[type=text]::placeholder {
+	color: var(--dark-gray);
 }
 li.write {
 	padding: 12px 10px 12px 16px;
 	border-radius: 24px;
 	color: white;
 	background-color: var(--orange);
+}
+li.write:hover {
+	background-color: var(--light-orange);
+}
+li.write:active {
+	border-radius: 12px;
+	background-color: var(--darker-orange);
 }
 li.write img {
 	filter: unset;
@@ -172,12 +324,14 @@ img.compass {
 img.community {
 	display: none;
 }
-.profile {
-	height: 24px;
-	padding: 12px;
+.profile-icon {
+	height: 32px;
 	margin-right: 8px;
-	border-radius: 24px;
-	background-color: var(--gray);
+}
+.profile-icon img {
+	height: 100%;
+	border-radius: 16px;
+	filter: unset;
 }
 article .wrapper {
 	padding: 48px 0;
@@ -185,15 +339,7 @@ article .wrapper {
 	flex-direction: column;
 	gap: 48px;
 }
-article h1 {
-	font-weight: 500;
-}
 .section-details {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-.section-carousel {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -218,17 +364,44 @@ article h1 {
 	z-index: -2;
 }
 .section-details .frame .left {
-	width: 182px;
-	height: 256px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	gap: 8px;
 	margin: 0 0 32px 32px;
-	border-radius: 16px;
-	overflow: hidden;
 	flex-shrink: 0;
 }
-.section-details .frame .left img {
+.section-details .frame .left ul.thumbnail li {
+	width: 182px;
+	height: 256px;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.section-details .frame .left ul.thumbnail li img {
 	height: 100%;
+}
+.section-details .frame .left ul.reader-options {
+	display: flex;
+	gap: 8px;
+}
+.section-details .frame .left ul.reader-options li {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	padding: 12px 0;
+	border-radius: 16px;
+	background-color: var(--light-gray-blue);
+}
+.section-details .frame .left ul.reader-options li:hover {
+	border-radius: 32px;
+}
+.section-details .frame .left ul.reader-options li:active {
+	border-radius: 16px;
+	background-color: var(--heavy-gray-blue);
+}
+.section-details .frame .left ul.reader-options li img {
+	filter: brightness(26%);
 }
 .section-details .frame .right {
 	display: flex;
@@ -241,10 +414,13 @@ article h1 {
 	filter: brightness(26%);
 }
 .section-details .frame .right p.dialog {
-	height: 136px;
+	height: 177px;
 	overflow-y: scroll;
 }
 .section-details .frame .right p.dialog::-webkit-scrollbar {
+	display: none;
+}
+.section-details .frame .right ul.reader-options-mobile {
 	display: none;
 }
 .section-details ul {
@@ -256,30 +432,56 @@ article h1 {
 	align-items: center;
 	gap: 4px;
 }
+.section-carousel {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
 .section-carousel ul {
 	display: flex;
 	justify-content: center;
 	gap: 16px;
 }
 .section-carousel li {
-	width: 175px;
+	width: 150px;
 	height: 277px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	overflow: hidden;
+	border-radius: 10px;
+}
+.section-carousel li:hover {
+	border-radius: 20px;
+}
+.section-carousel li:active {
 	border-radius: 10px;
 }
 .section-carousel img {
 	height: 100%;
+}
+.section-carousel img:hover {
+	height: 102%;
+}
+.section-carousel img:active {
+	height: 100%;
+	filter: brightness(95%);
 }
 .section-carousel li.arrows {
 	width: 48px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	filter: brightness(26%);
+	padding: 0 8px;
+}
+.section-carousel li.arrows:hover {
+	background-color: var(--gray-blue);
+}
+.section-carousel li.arrows:active {
+	background-color: var(--light-gray-blue);
 }
 .section-carousel img.arrows {
+	filter: brightness(26%);
 	height: unset;
 }
 footer {
@@ -304,6 +506,20 @@ footer li {
 	top: 0;
 	z-index: +1;
 	background-color: var(--gray-blue);
+}
+#create-fanfic header.nav li.select-fanfic {
+	padding: 10px 12px;
+	margin: 8px 4px 8px 0;
+	border-radius: 20px;
+}
+#create-fanfic header.nav li.select-fanfic:hover {
+	background-color: var(--light-gray-blue);
+}
+#create-fanfic header.nav li.go-back:hover {
+	background-color: var(--light-gray-blue);
+}
+#create-fanfic header.nav li:hover {
+	background-color: initial;
 }
 #create-fanfic article .wrapper {
 	padding: 24px 0 32px 0;
@@ -357,9 +573,6 @@ footer li {
 	flex-direction: column;
 	gap: 8px;
 }
-#create-fanfic ul.search li {
-	margin: 8px 10px;
-}
 #create-fanfic ul.add-media {
 	display: flex;
 	gap: 8px;
@@ -370,7 +583,14 @@ footer li {
 	align-items: center;
 	padding: 12px 0;
 	border-radius: 16px;
-	background-color: var(--heavier-gray-blue);
+	background-color: var(--light-gray-blue);
+}
+#create-fanfic ul.add-media li:hover {
+	border-radius: 32px;
+}
+#create-fanfic ul.add-media li:active {
+	border-radius: 16px;
+	background-color: var(--heavy-gray-blue);
 }
 #create-fanfic ul.add-media img {
 	width: 24px;
@@ -380,12 +600,6 @@ footer li {
 }
 #create-fanfic img.dots-menu {
 	display: none;
-}
-#create-fanfic li.select-fanfic {
-	padding: 10px 12px;
-	margin: 8px 4px 8px 0;
-	border-radius: 20px;
-	background-color: var(--heavier-gray-blue);
 }
 #create-fanfic li.next-step {
 	padding: 10px 12px;
@@ -404,7 +618,14 @@ footer li {
 	height: 24px;
 	border-radius: 16px;
 	padding: 12px;
-	background-color: var(--heavier-gray-blue);
+	background-color: var(--light-gray-blue);
+}
+#create-fanfic ul.mc .plus:hover {
+	border-radius: 32px;
+}
+#create-fanfic ul.mc .plus:active {
+	border-radius: 16px;
+	background-color: var(--heavy-gray-blue);
 }
 #create-fanfic ul.mc input {
 	width: 150px;
@@ -436,7 +657,7 @@ footer li {
 	gap: 16px;
 	padding: 0 32px;
 }
-#create-fanfic input {
+#create-fanfic article input {
 	width: -webkit-fill-available;
 	font-family: inherit;
 	padding: 14px 16px;
@@ -497,12 +718,12 @@ footer li {
 	}
 }
 /* Laptop */
-@media only screen and (max-width: 1264px) {
+@media only screen and (max-width: 1328px) {
 	.wrapper {
 		width: 100%;
 	}
-	article h1 {
-		padding: 0 32px;
+	article h4 {
+		padding: 0 64px;
 	}
 	header ul.left {
 		padding-left: 32px;
@@ -510,11 +731,19 @@ footer li {
 	header ul.right {
 		padding-right: 32px;
 	}
+	header li.explore:focus .explore-dropdown {
+		display: flex;
+		flex-direction: row;
+		background-color: var(--gray-blue);
+		outline: none;
+		visibility: visible;
+		opacity: 1;
+	}
 	.section-details {
-		padding: 0 32px;
+		padding: 0 64px;
 	}
 	.section-carousel {
-		padding: 0 32px;
+		padding: 0 46px;
 	}
 	.section-carousel ul {
 		gap: 12px;
@@ -531,7 +760,7 @@ footer li {
 	article .wrapper {
 		gap: 32px;
 	}
-	.profile {
+	.profile-icon {
 		margin-right: unset;
 	}
 	header li h6.username {
@@ -553,7 +782,7 @@ footer li {
 		display: none;
 	}
 	header ul.left li {
-		margin: 8px 0 8px 10px;
+		margin: 8px 4px;
 	}
 	footer .wrapper {
 		padding: 8px 0;
@@ -579,12 +808,7 @@ footer li {
 		display: none;
 	}
 }
-@media only screen and (max-width: 768px) {
-	#create-fanfic ul.reader-and-language {
-		flex-direction: column;
-	}
-}
-@media only screen and (max-width: 711px) {
+@media only screen and (max-width: 776px) {
 	header ul.left li.dropdown {
 		display: flex;
 		margin: 8px 10px;
@@ -596,18 +820,32 @@ footer li {
 		display: none;
 	}
 	.section-details .frame .right p.dialog {
-		height: 105px;
+		height: 148px;
 	}
 }
-@media only screen and (max-width: 670px) {
-	li.bookmarks {
-		display: none;
+@media only screen and (max-width: 768px) {
+	#create-fanfic ul.reader-and-language {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 668px) {
+	article h4 {
+		padding: 0 32px;
+	}
+	header ul.left {
+		padding-left: 16px;
+	}
+	header ul.right {
+		padding-right: 16px;
 	}
 	li.notification {
 		display: none;
 	}
 	li.novel-4 {
 		display: none;
+	}
+	.section-details {
+		padding: 0 32px;
 	}
 	.section-details ul {
 		gap: 12px;
@@ -621,7 +859,11 @@ footer li {
 	#create-fanfic img.dots-menu {
 		display: unset;
 	}
+	footer {
+		padding: 0 16px;
+	}
 }
+/* Mobile */
 @media only screen and (max-width: 602px) {
 	#create-fanfic article .wrapper {
 		flex-direction: column;
@@ -634,21 +876,10 @@ footer li {
 	#create-fanfic article .wrapper .right {
 		margin: 0 32px;
 	}
-}
-@media only screen and (max-width: 582px) {
 	header li img.next-to-text {
 		margin-right: unset;
 	}
-	article h1 {
-		padding: 0 16px;
-	}
-	header ul.left {
-		padding-left: 16px;
-	}
-	header ul.right {
-		padding-right: 16px;
-	}
-	footer {
+	article h4 {
 		padding: 0 16px;
 	}
 	li.write {
@@ -658,20 +889,10 @@ footer li {
 		width: unset;
 		margin-left: auto;
 	}
-	ul.search li {
-		width: 100%;
-		border-radius: 24px;
-		padding: 12px;
-		margin: 8px;
-		background-color: unset;
-	}
 	ul.search h6 {
 		display: none;
 	}
 	.section-details {
-		padding: 0 16px;
-	}
-	.section-carousel {
 		padding: 0 16px;
 	}
 	#create-fanfic header ul.title {
@@ -721,6 +942,18 @@ footer li {
 		font-size: 14px;
 		color: var(--dark-gray);
 	}
+	article h4 {
+		padding: 0 16px;
+	}
+	header ul.left {
+		padding-left: 16px;
+	}
+	header ul.right {
+		padding-right: 16px;
+	}
+	footer {
+		padding: 0 16px;
+	}
 	.section-details .frame {
 		flex-direction: column;
 		justify-content: unset;
@@ -735,6 +968,9 @@ footer li {
 		margin: 0 auto 16px auto;
 		border-radius: unset;
 	}
+	.section-details .frame .left ul.reader-options {
+		display: none;
+	}
 	.section-details .frame .left img {
 		border-radius: 16px;
 	}
@@ -745,11 +981,37 @@ footer li {
 	.section-details .frame .right p.dialog {
 		height: 85px;
 	}
+	.section-details .frame .right ul.reader-options-mobile {
+		display: flex;
+		gap: 8px;
+	}
+	.section-details .frame .right ul.reader-options-mobile li {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		padding: 12px 0;
+		border-radius: 16px;
+		background-color: var(--light-gray-blue);
+	}
+	.section-details .frame .right ul.reader-options-mobile li:hover {
+		border-radius: 32px;
+	}
+	.section-details .frame .right ul.reader-options-mobile li:active {
+		border-radius: 16px;
+		background-color: var(--heavy-gray-blue);
+	}
+	.section-details .frame .right ul.reader-options-mobile li img {
+		filter: brightness(26%);
+	}
+	.section-carousel {
+		padding: 0 16px;
+	}
 	.section-carousel li {
 		height: 175px;
 	}
 }
-@media only screen and (max-width: 377px) {
+@media only screen and (max-width: 418px) {
 	ul.search {
 		display: none;
 	}
@@ -766,7 +1028,15 @@ footer li {
 		margin: 0 16px;
 	}
 }
+@media only screen and (max-width: 358px) {
+	li.bookmarks {
+		display: none;
+	}
+}
 @media only screen and (max-width: 345px) {
+	.section-details .frame .right {
+		padding: 0 16px 16px 16px;
+	}
 	#create-fanfic article .wrapper .right {
 		border-radius: unset;
 		margin: unset;

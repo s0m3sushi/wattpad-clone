@@ -14,23 +14,105 @@
 					<img src="./svg/dropdown-bars.svg" alt="">
 				</li>
 				<a href="">
-					<img class="logo" src="./img/logo.png" alt="">
+					<img class="logo" src="./svg/logo.svg" alt="">
 				</a>
-				<li class="explore">
+				<li class="explore" tabindex="1">
+					<i class="close-dropdown" tabindex="1"></i>
 					<img class="compass" src="./svg/compass.svg" alt="">
 					<h6 class="compass">Khám phá</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
+					<div class="explore-dropdown">
+						<div class="wrapper" id="dropdown-wrapper-fix">
+						<ul>
+							<li>
+								<h6>Bí ẩn</h6>
+							</li>
+							<li>
+								<h6>Chicklit</h6>
+							</li>
+							<li>
+								<h6>Cổ điển</h6>
+							</li>
+							<li>
+								<h6>Fan fiction</h6>
+							</li>
+							<li>
+								<h6>Hài hước</h6>
+							</li>
+							<li>
+								<h6>Hành động</h6>
+							</li>
+							<li>
+								<h6>Khoa học viễn tưởng</h6>
+							</li>
+							<li>
+								<h6>Kinh dị</h6>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<h6>Lãng mạn</h6>
+							</li>
+							<li>
+								<h6>Ma cà rồng</h6>
+							</li>
+							<li>
+								<h6>Người sói</h6>
+							</li>
+							<li>
+								<h6>Ngẫu nhiên</h6>
+							</li>
+							<li>
+								<h6>Phi Tiểu Thuyết</h6>
+							</li>
+							<li>
+								<h6>Phiêu lưu</h6>
+							</li>
+							<li>
+								<h6>Siêu nhiên</h6>
+							</li>
+							<li>
+								<h6>Thriller</h6>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<h6>Thơ Ca</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Chung</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Lịch Sử</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Thiếu Niên</h6>
+							</li>
+							<li>
+								<h6>Truyện Ngắn</h6>
+							</li>
+							<li>
+								<h6>Truyện Tâm Linh</h6>
+							</li>
+							<li>
+								<h6>Viễn Tưởng</h6>
+							</li>
+						</ul>
+						</div>
+					</div>
 				</li>
-				<li class="community">
+				<li class="community" tabindex="1">
+					<i class="close-dropdown" tabindex="1"></i>
 					<img class="community" src="./svg/people-group.svg" alt="">
 					<h6 class="community">Cộng đồng</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
+					<div class="community-dropdown">
+					</div>
 				</li>
 			</ul>
 			<ul class="search">
 				<li>
-					<img class="next-to-text" src="./svg/search.svg" alt="">
-					<h6>Tìm kiếm</h6>
+					<input type="text" placeholder="Tìm kiếm">
 				</li>
 			</ul>
 			<ul class="right">
@@ -43,30 +125,44 @@
 				</a>
 				<a href="./my-fanfic.html">
 					<li class="bookmarks">
-						<img src="./svg/book.svg" alt="">
+						<img src="./svg/bookmark.svg" alt="">
 					</li>
 				</a>
 				<li class="notification">
 					<img src="./svg/bell.svg" alt="">
 				</li>
-				<li>
-					<div class="profile">
-						<img src="./svg/person.svg" alt="">
+				<li class="profile">
+					<div class="profile-icon">
+						<img src="./img/profile.jpg" alt="">
 					</div>
-					<h6 class="username">Gemini2k4</h6>
+					<h6 class="username">s0m3guy</h6>
 				</li>
 			</ul>
 		</div>
 	</header>
 	<article>
 		<div class="wrapper">
-			<h1>Chào mừng đến trang chủ, Gemini2k4!</h1>
+			<h4>Chào mừng đến trang chủ, s0m3guy!</h4>
 			<div class="section-details">
 				<h2>Truyện đã hoàn thành gần đây</h2>
 				<div class="frame">
 					<div class="background"></div>
 					<div class="left">
-						<img src="./img/selected-novel.jpg" alt="">
+						<ul class="thumbnail">
+							<li>
+								<img src="./img/selected-novel.jpg" alt="">
+							</li>
+						</ul>
+						<ul class="reader-options">
+							<li>
+								<img src="./svg/bookmark.svg" alt="">
+								<h6>Lưu</h6>
+							</li>
+							<li>
+								<img src="./svg/read.svg" alt="">
+								<h6>Đọc</h6>
+							</li>
+						</ul>
 					</div>
 					<div class="right">
 						<h3>Anh chỉ thích hình tượng của em</h3>
@@ -76,7 +172,7 @@
 								<p>12,5K</p>
 							</li>
 							<li>
-								<img src="./svg/star.svg" alt="">
+								<img src="./svg/bookmark.svg" alt="">
 								<p>12,5K</p>
 							</li>
 							<li>
@@ -89,17 +185,26 @@
 							<b>Dịch giả:</b> Tiểu Song Tử <br>
 							<b>Thể loại:</b> Hiện đại, niên hạ, giới giải trí, duyên trời tác hợp, chữa lành, minh tinh công x phong lưu họa sĩ thụ. <br>
 							<b>Số chương:</b> 94 chương + 21 ngoại truyện <br>
-							<br>
 							<b>Giới thiệu:</b> <br>
 							Hình tượng của Hạ Tập Thanh đúng chuẩn là một người nhìn cool ngầu, có vẻ mạnh mẽ, bản tính thì phong lưu, dựa vào khuôn mặt đẹp như thiên sứ mà lừa gạt vô số người.Không thể ngờ chơi dao mãi cũng có ngày đứt tay, vừa gặp thần tượng đã bị lộ tính cách thật, "lật xe" cực nhanh. Tham gia họp báo phim của thần tượng, chỉ xuất hiện 3 giây trên màn ảnh, ngay lập tức đã khiến cư dân mạng bùng nổ vì vẻ ngoài xinh đẹp, lấy thân phận fan Chu Tự Hành ra mắt vị trí Center, cùng thần tượng lên hot search, lên chương trình thực tế, lên… Không sai, giống hệt tưởng tượng của các bạn đó.....
 						</p>
+						<ul class="reader-options-mobile">
+							<li>
+								<img src="./svg/bookmark.svg" alt="">
+								<h6>Lưu</h6>
+							</li>
+							<li>
+								<img src="./svg/read.svg" alt="">
+								<h6>Đọc</h6>
+							</li>
+						</ul>
 					</div>
 				</div> 
 			</div>
 			<div class="section-carousel">
 				<ul>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
+						<img class="arrows" src="./svg/chevron-left.svg" alt="">
 					</li>
 					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
@@ -117,7 +222,7 @@
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-right.svg" alt="">
+						<img class="arrows" src="./svg/chevron-right.svg" alt="">
 					</li>
 				</ul>
 			</div>
@@ -125,7 +230,7 @@
 				<h2>Truyện hay nhất đề xuất cho bạn</h2>
 				<ul>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
+						<img class="arrows" src="./svg/chevron-left.svg" alt="">
 					</li>
 					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
@@ -143,7 +248,7 @@
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-right.svg" alt="">
+						<img class="arrows" src="./svg/chevron-right.svg" alt="">
 					</li>
 				</ul>
 			</div>
@@ -151,7 +256,7 @@
 				<h2>Truyện được thảo luận nhiều</h2>
 				<ul>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
+						<img class="arrows" src="./svg/chevron-left.svg" alt="">
 					</li>
 					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
@@ -169,7 +274,7 @@
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-right.svg" alt="">
+						<img class="arrows" src="./svg/chevron-right.svg" alt="">
 					</li>
 				</ul>
 			</div>
@@ -178,7 +283,21 @@
 				<div class="frame">
 					<div class="background"></div>
 					<div class="left">
-						<img src="./img/selected-novel.jpg" alt="">
+						<ul class="thumbnail">
+							<li>
+								<img src="./img/selected-novel.jpg" alt="">
+							</li>
+						</ul>
+						<ul class="reader-options">
+							<li>
+								<img src="./svg/bookmark.svg" alt="">
+								<h6>Lưu</h6>
+							</li>
+							<li>
+								<img src="./svg/read.svg" alt="">
+								<h6>Đọc</h6>
+							</li>
+						</ul>
 					</div>
 					<div class="right">
 						<h3>Anh chỉ thích hình tượng của em</h3>
@@ -188,7 +307,7 @@
 								<p>12,5K</p>
 							</li>
 							<li>
-								<img src="./svg/star.svg" alt="">
+								<img src="./svg/bookmark.svg" alt="">
 								<p>12,5K</p>
 							</li>
 							<li>
@@ -201,7 +320,6 @@
 							<b>Dịch giả:</b> Tiểu Song Tử <br>
 							<b>Thể loại:</b> Hiện đại, niên hạ, giới giải trí, duyên trời tác hợp, chữa lành, minh tinh công x phong lưu họa sĩ thụ. <br>
 							<b>Số chương:</b> 94 chương + 21 ngoại truyện <br>
-							<br>
 							<b>Giới thiệu:</b> <br>
 							Hình tượng của Hạ Tập Thanh đúng chuẩn là một người nhìn cool ngầu, có vẻ mạnh mẽ, bản tính thì phong lưu, dựa vào khuôn mặt đẹp như thiên sứ mà lừa gạt vô số người.Không thể ngờ chơi dao mãi cũng có ngày đứt tay, vừa gặp thần tượng đã bị lộ tính cách thật, "lật xe" cực nhanh. Tham gia họp báo phim của thần tượng, chỉ xuất hiện 3 giây trên màn ảnh, ngay lập tức đã khiến cư dân mạng bùng nổ vì vẻ ngoài xinh đẹp, lấy thân phận fan Chu Tự Hành ra mắt vị trí Center, cùng thần tượng lên hot search, lên chương trình thực tế, lên… Không sai, giống hệt tưởng tượng của các bạn đó.....
 						</p>
@@ -211,7 +329,7 @@
 			<div class="section-carousel">
 				<ul>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-left.svg" alt="">
+						<img class="arrows" src="./svg/chevron-left.svg" alt="">
 					</li>
 					<li class="novel-1">
 						<img src="./img/novel-1.jpg" alt="">
@@ -229,7 +347,7 @@
 						<img src="./img/novel-5.jpg" alt="">
 					</li>
 					<li class="arrows">
-						<img class="arrows" src="./svg/circle-chevron-right.svg" alt="">
+						<img class="arrows" src="./svg/chevron-right.svg" alt="">
 					</li>
 				</ul>
 			</div>
