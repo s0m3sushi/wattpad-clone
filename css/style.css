@@ -159,22 +159,30 @@ header li.explore {
 	padding: 12px 8px 12px 12px;
 }
 
-/* Start of experimental css dropdown */
+						/* Start of experimental css dropdown */
 header li.explore .explore-dropdown {
+	width: 100%;
 	position: absolute;
 	top: 72px;
-	left: 178px;
-	padding: 8px;
-	border-radius: 16px;
+	left: 0;
 	z-index: 100000;
 	visibility: hidden;
 	opacity: 0;
 }
-header li.explore:focus .explore-dropdown .wrapper {
+header li.explore .explore-dropdown .wrapper {
+	width: fit-content;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--gray-blue);
+	padding: 8px;
+	border-radius: 16px;
 	outline: none;
+}
+header li.explore:focus .explore-dropdown .wrapper {
+	visibility: visible;
+	opacity: 1;
+}
+header li.explore:focus .explore-dropdown {
 	visibility: visible;
 	opacity: 1;
 }
@@ -185,11 +193,13 @@ header li.explore:focus .explore-dropdown ul {
 }
 header li.explore:focus .explore-dropdown li {
 	margin: 4px;
+	border: 2px solid var(--light-gray-blue);
 }
-header li:hover, li.explore:focus li:hover {
+header li.explore:focus .explore-dropdown li:hover {
 	background-color: var(--light-gray-blue);
 }
-header li:hover, li.explore:focus li:active {
+header li.explore:focus .explore-dropdown li:active {
+	border: 2px solid var(--heavy-gray-blue);
 	background-color: var(--heavy-gray-blue);
 }
 header li.explore i.close-dropdown {
@@ -214,36 +224,55 @@ header li.explore i.close-dropdown:focus .explore-dropdown {
 	visibility: hidden;
 	opacity: 0;
 }
-
-
-
 header li.community .community-dropdown {
 	position: absolute;
 	top: 72px;
-	left: 8px;
-	background-color: var(--gray-blue);
-	width: -webkit-fill-available;
+	margin-left: -22px;
 	z-index: 100000;
 	visibility: hidden;
 	opacity: 0;
 }
-header li.community:focus .community-dropdown {
+header li.community .community-dropdown .wrapper {
+	width: fit-content;
+	background-color: var(--gray-blue);
+	padding: 8px;
+	border-radius: 16px;
 	outline: none;
+}
+header li.community:focus .community-dropdown .wrapper {
 	visibility: visible;
 	opacity: 1;
 }
-header li:hover, li.community:focus li {
+header li.community:focus .community-dropdown {
+	visibility: visible;
+	opacity: 1;
+}
+header li.community:focus .community-dropdown ul {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+header li.community:focus .community-dropdown li {
+	margin: 4px;
+	border: 2px solid var(--light-gray-blue);
+}
+header li.community:focus .community-dropdown li:hover {
+	background-color: var(--light-gray-blue);
+}
+header li.community:focus .community-dropdown li:active {
+	border: 2px solid var(--heavy-gray-blue);
 	background-color: var(--heavy-gray-blue);
 }
 header li.community i.close-dropdown {
+	width: fit-content;
+	height: fit-content;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	opacity: 0;
-	width: fit-content;
-	height: fit-content;
 	cursor: pointer;
 	z-index: 10;
 	display: none;
@@ -257,7 +286,7 @@ header li.community i.close-dropdown:focus .community-dropdown {
 	visibility: hidden;
 	opacity: 0;
 }
-/* End of experimental css dropdown */
+						/* End of experimental css dropdown */
 
 header li.community {
 	flex-shrink: 0;
@@ -722,7 +751,10 @@ footer li {
 	.wrapper {
 		width: 100%;
 	}
-	article h4 {
+	#main article h4 {
+		padding: 0 64px;
+	}
+	#my-fanfic article h4 {
 		padding: 0 64px;
 	}
 	header ul.left {
@@ -731,13 +763,18 @@ footer li {
 	header ul.right {
 		padding-right: 32px;
 	}
-	header li.explore:focus .explore-dropdown {
-		display: flex;
+	header li.explore .explore-dropdown {
+		width: unset;
+		left: 170px;
+	}
+	header li.explore .explore-dropdown .wrapper {
 		flex-direction: row;
-		background-color: var(--gray-blue);
-		outline: none;
-		visibility: visible;
-		opacity: 1;
+	}
+	header li.explore .explore-dropdown .wrapper ul {
+		flex-direction: column;
+	}
+	header li.community .community-dropdown .wrapper {
+		margin: unset;
 	}
 	.section-details {
 		padding: 0 64px;
@@ -829,7 +866,10 @@ footer li {
 	}
 }
 @media only screen and (max-width: 668px) {
-	article h4 {
+	#main article h4 {
+		padding: 0 32px;
+	}
+	#my-fanfic article h4 {
 		padding: 0 32px;
 	}
 	header ul.left {
@@ -879,7 +919,10 @@ footer li {
 	header li img.next-to-text {
 		margin-right: unset;
 	}
-	article h4 {
+	#main article h4 {
+		padding: 0 16px;
+	}
+	#my-fanfic article h4 {
 		padding: 0 16px;
 	}
 	li.write {
@@ -942,7 +985,10 @@ footer li {
 		font-size: 14px;
 		color: var(--dark-gray);
 	}
-	article h4 {
+	#main article h4 {
+		padding: 0 16px;
+	}
+	#my-fanfic article h4 {
 		padding: 0 16px;
 	}
 	header ul.left {

@@ -13,18 +13,108 @@
 				<li class="dropdown">
 					<img src="./svg/dropdown-bars.svg" alt="">
 				</li>
-				<a href="">
+				<a href="./index.html">
 					<img class="logo" src="./svg/logo.svg" alt="">
 				</a>
-				<li class="explore">
+				<li class="explore" tabindex="1">
+					<i class="close-dropdown" tabindex="1"></i>
 					<img class="compass" src="./svg/compass.svg" alt="">
 					<h6 class="compass">Khám phá</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
+					<div class="explore-dropdown">
+						<div class="wrapper">
+						<ul>
+							<li>
+								<h6>Bí ẩn</h6>
+							</li>
+							<li>
+								<h6>Chicklit</h6>
+							</li>
+							<li>
+								<h6>Cổ điển</h6>
+							</li>
+							<li>
+								<h6>Fan fiction</h6>
+							</li>
+							<li>
+								<h6>Hài hước</h6>
+							</li>
+							<li>
+								<h6>Hành động</h6>
+							</li>
+							<li>
+								<h6>Khoa học viễn tưởng</h6>
+							</li>
+							<li>
+								<h6>Kinh dị</h6>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<h6>Lãng mạn</h6>
+							</li>
+							<li>
+								<h6>Ma cà rồng</h6>
+							</li>
+							<li>
+								<h6>Người sói</h6>
+							</li>
+							<li>
+								<h6>Ngẫu nhiên</h6>
+							</li>
+							<li>
+								<h6>Phi Tiểu Thuyết</h6>
+							</li>
+							<li>
+								<h6>Phiêu lưu</h6>
+							</li>
+							<li>
+								<h6>Siêu nhiên</h6>
+							</li>
+							<li>
+								<h6>Thriller</h6>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<h6>Thơ Ca</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Chung</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Lịch Sử</h6>
+							</li>
+							<li>
+								<h6>Tiểu Thuyết Thiếu Niên</h6>
+							</li>
+							<li>
+								<h6>Truyện Ngắn</h6>
+							</li>
+							<li>
+								<h6>Truyện Tâm Linh</h6>
+							</li>
+							<li>
+								<h6>Viễn Tưởng</h6>
+							</li>
+						</ul>
+						</div>
+					</div>
 				</li>
-				<li class="community">
+				<li class="community" tabindex="1">
+					<i class="close-dropdown" tabindex="1"></i>
 					<img class="community" src="./svg/people-group.svg" alt="">
 					<h6 class="community">Cộng đồng</h6>
 					<img src="./svg/round-arrow-drop-down.svg" alt="">
+					<div class="community-dropdown">
+						<div class="wrapper">
+							<ul>
+								<li><h6>Giải thưởng Wattys</h6></li>
+								<li><h6>Community Happenings</h6></li>
+								<li><h6>Đại sứ Wattpad</h6></li>
+							</ul>
+						</div>
+					</div>
 				</li>
 			</ul>
 			<ul class="search">
@@ -42,7 +132,7 @@
 				</a>
 				<a href="./my-fanfic.html">
 					<li class="bookmarks">
-						<img src="./svg/book.svg" alt="">
+						<img src="./svg/bookmark.svg" alt="">
 					</li>
 				</a>
 				<li class="notification">
@@ -50,35 +140,9 @@
 				</li>
 				<li class="profile">
 					<div class="profile-icon">
-						<img src="./svg/person.svg" alt="">
+						<img src="./img/profile.jpg" alt="">
 					</div>
 					<h6 class="username">s0m3guy</h6>
-				</li>
-			</ul>
-		</div>
-	</header>
-	<header class="nav">
-		<div class="wrapper">
-			<ul class="left">
-				<a href="./my-fanfic.html">
-					<li class="go-back">
-						<img src="./svg/chevron-left.svg" alt="">
-						<h6>Sáng tác Truyện</h6>
-					</li>
-				</a>
-			</ul>
-			<ul class="title">
-				<li>
-					<h6>Truyện chưa có Tiêu Đề</h6>
-				</li>
-			</ul>
-			<ul class="right">
-				<li class="select-fanfic">
-					<img class="dots-menu" src="./svg/dots-vertical.svg" alt="">
-					<h6>Chọn</h6>
-				</li>
-				<li class="next-step">
-					<h6>Tiếp theo</h6>
 				</li>
 			</ul>
 		</div>
